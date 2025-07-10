@@ -435,7 +435,7 @@ sudo systemctl restart jenkins
 
 Switch to Jenkins user
 sudo -su jenkins
-aws eks update-kubeconfig --name kastro-eks --region us-east-1
+aws eks update-kubeconfig --name seetha-eks --region ap-south-1
 
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -451,8 +451,8 @@ pipeline {
 
     environment {
         SCANNER_HOME = tool 'sonar-scanner'
-        DOCKER_IMAGE = 'kastrov/bms:latest'
-        EKS_CLUSTER_NAME = 'kastro-eks'
+        DOCKER_IMAGE = 'seethasuresh/bms:latest'
+        EKS_CLUSTER_NAME = 'seetha-eks'
         AWS_REGION = 'ap-south-1'
     }
 
